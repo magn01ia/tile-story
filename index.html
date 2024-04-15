@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title></title>
+<script type="module" src="module-s.js"></script>
+</head>
+<body>
+<script type="text/yaml">
+style: https://tile.openstreetmap.jp/styles/osm-bright-ja/style.json
+//title: 地図語りのテスト
+//subtitle: タイルデータについて
+//byline: 背景地図には 地理院地図Vector（仮称）を使っています。 (powered by UNVT)
+theme: light
+footer: このページはunvt/tellを使用して作成しました。 <a href='https://github.com/unvt/tell/tree/main'>GitHub</a>
+view:
+  c1:
+    center: [140.084722, 36.104578]
+    zoom: 0
+  c2:
+    center: [140.084722, 36.104578]
+    zoom: 1
+  c3:
+    center: [140.084722, 36.104578]
+    zoom: 5
+  c4:
+    center: [140.084722, 36.104578]
+    zoom: 10
+  c5:
+    center: [140.084722, 36.104578]
+    zoom: 20
+  c6:
+    center: [140.084722, 36.104578]
+    zoom: 17  
+chapters: 
+  - id: chap1
+    alignment: right
+    title: タイルデータについて
+    description: >
+      極地を除いた256px×256pxの
+      正方形タイルで分割し構成されています。
+      ズームレベルという概念があり、ズームレベル0は世界を1枚の正方形タイルで表した状態です。
+      現在の表示が、そのズームレベル0になります。
+      ズームレベルの数字は拡大するにしたがって、どんどん大きくなります。
+    location: c1
+
+  - id: chap2
+    alignment: left
+    title: ズームレベル1の状態
+    description: >
+      ズームレベルを上げてズームレベル1がこの状態です。
+      地図がわずかに拡大されたことが分かると思います。
+      ズームレベル0の正方形を縦横半分にしたものがズームレベル1ですから、
+      ズームレベル1のタイル数は縦横2枚の、合計4枚になります。
+    location: c2
+
+  - id: chap3
+    alignment: right
+    title: ズームレベル5
+    description: >
+      それでは一気にズームレベル5まで上げます。
+      ズームレベルを1上げるごとにタイルの枚数は縦横それぞれ2倍に増えていきます。
+      ズームレベル5では縦横32枚のタイルで構成され、総枚数1,024枚のタイルになります。
+      ズームレベル5の段階でもこの枚数ですから、タイルデータ量の膨大さが分かると思います。
+    location: c3
+
+  - id: chap4
+    alignment: left
+    title: ズームレベル10
+    description: >
+      ズームレベルを倍の10まで上げます。
+      ズームレベル5に比べるとだいぶ拡大され、位置が良く分かるようになります。
+      ズームレベル5では縦横1,024枚のタイルで構成され、総枚数1,048,576枚(百万枚)のタイルになります。
+    location: c4
+
+  - id: chap5
+    alignment: right
+    title: ズームレベル20
+    description: >
+      最後にズームレベル20がこちらになります。
+      タイルの枚数は縦横1,048,576枚(百万枚)のタイルで構成され、総枚数1,099,511,627,776枚(一兆枚)のタイルになります。
+      ただ、ご覧のようにズームレベル20では拡大されすぎてしまい、地図としてここまで作成する必要性も無いことがわかります。
+    location: c5
+
+  - id: chap6
+    alignment: right
+    title: ズームレベル17
+    description: >
+      なのでタイルデータを作成する際には、目的やデータに合わせて、適切なズームレベルを選択することが必要になってきます。
+    location: c6
+</script>
+</body>
+</html>
